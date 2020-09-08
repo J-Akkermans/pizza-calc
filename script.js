@@ -2,39 +2,30 @@ const klein = 5;
 const middel = 7;
 const groot = 10;
 
+
 var countKlein = 0;
 var countMiddel = 0;
 var countGroot = 0;
 
-function pizzaKlein(){
-    if(countKlein > 0){
-        document.getElementById("pizzaKlein").innerHTML = "pizza's"
+var clicksPizzas = [0, 0, 0]
+function pizzaCalc(id){
+    clicksPizzas[id] += 1;
+    if(id === 0){
+        countKlein++
+        var totaalKlein = countKlein*klein;
+        console.log("ID = 0" +  " " +  countKlein + " " + totaalKlein)
     }
-
-    countKlein++;
-    totalKlein = countKlein*klein
-
-    document.getElementById("klein").innerHTML = countKlein;
-    document.getElementById("totalKlein").innerHTML = totalKlein + " Euro";
-}
-
-function pizzaMiddel(){
-    if(countMiddel > 0){
-        document.getElementById("pizzaMiddel").innerHTML = "pizza's"
+    else if (id === 1){
+        countMiddel++
+        var totaalMiddel = countMiddel*middel;
+        console.log("ID = 1" +  " " +  countMiddel + " " + totaalMiddel)
     }
+    else if (id === 2){
+        countGroot++
+        var totaalGroot = countGroot*groot;
+        console.log("ID = 2" +  " " +  countGroot + " " + totaalGroot)
+    }
+ 
+    console.log(countKlein*klein +countMiddel*middel + countGroot*groot);
 
-    countMiddel++;
-    totalMiddel = countMiddel*middel
-    console.log(countMiddel);
-    document.getElementById("middel").innerHTML = countMiddel;
-    document.getElementById("totalMiddel").innerHTML = totalMiddel + " Euro";
 }
-
-function pizzaGroot(){
-    countGroot++;
-    totalGroot = countGroot*groot
-    console.log(countGroot);
-    document.getElementById("groot").innerHTML = countGroot;
-    document.getElementById("totalGroot").innerHTML = totalGroot + " Euro";
-}
-
