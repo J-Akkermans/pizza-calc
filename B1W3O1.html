@@ -6,10 +6,21 @@
     <title>B1W3O1</title>
 </head>
 <body>
+    <button onclick="pizzaKlein();">Klein | 5.00</button>
+    <button onclick="pizzaMiddel();">Middel |  7.00</button>
+    <button onclick="pizzaGroot();">Groot | 10.00</button>
+
     <div>
-        <button onclick=onClickPizza(0)>Pizza klein smaak 1</button>
-        <button onclick=onClickPizza(1)>Pizza medium smaak 1</button>
-        <button onclick=onClickPizza(2)>Pizza large smaak 1</button>
+        <p>
+            U heeft <span id="klein"></span> kleine <span id="pizzaKlein">pizza </span>, deze kosten in totaal <span id="totalKlein"></span>
+        </p>
+        <p>
+            U heeft <span id="middel"></span> middel grote <span id="pizzaMiddel">pizza </span>, deze kosten in totaal<span id="totalMiddel"></span>
+        </p>
+        <p>
+            U heeft <span id="groot"></span> grote <span id="pizzaGroot">pizza </span>, deze kosten in totaal<span id="totalGroot"></span>
+        </p>
+
     </div>
 </body>
 <script src="script.js"></script>
